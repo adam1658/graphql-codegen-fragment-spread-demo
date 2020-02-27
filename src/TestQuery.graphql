@@ -1,0 +1,21 @@
+query Test {
+  a {
+    ...AFields
+  }
+}
+
+fragment AFields on A {
+  bs {
+    ...BFields
+  }
+}
+
+fragment BFields on B {
+  cs {
+    ...CFields
+  }
+}
+
+fragment CFields on C {
+  greeting
+}

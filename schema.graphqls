@@ -1,0 +1,15 @@
+type Query {
+  a: A
+}
+
+type A {
+  bs: [B!]!
+}
+
+type B {
+  cs: [C!]!
+}
+
+type C {
+  greeting: String!
+}
