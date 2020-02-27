@@ -1,15 +1,9 @@
 schema: schema.graphqls
-documents: ./src/**/*.graphql
+documents: ./src/TestQuery.graphql
 generates:
-  ./src/graphql-types.generated.ts:
+  ./src/TestQuery.generated.tsx:
     plugins:
       - typescript
-  src:
-    preset: near-operation-file
-    presetConfig:
-      extension: .generated.tsx
-      baseTypesPath: graphql-types.generated.ts
-    plugins:
       - typescript-operations
       - typescript-react-apollo
     config:
